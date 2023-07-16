@@ -2,7 +2,6 @@
 
 ### Tecnologia
 
-- Utilizaçao:
 - JQUERY para ajudar em algumas funcionalidades
 - Materialize para deixar ajudar no layout.
 
