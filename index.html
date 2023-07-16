@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="center-align tooltipped" data-position="bottom" data-tooltip="Sua empresa de viagem"><a
+                    href="#"><img
+                        src="https://img.freepik.com/vetores-gratis/logotipo-detalhado-da-viagem_23-2148616611.jpg"
+                        width="25%" height="25%" alt="Empresa de Viagens"></a></div>
+
+            <ul class="collapsible">
+                <li class="active">
+                    <div class="collapsible-header">
+                        <i class="material-icons">flight_takeoff</i>
+                        Ida
+                    </div>
+                    <div class="collapsible-body">
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">person</i>
+                                <input id="Nome" type="text" class="validate">
+                                <label for="Nome">Qual seu nome?</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">email</i>
+                                <input id="Email" type="email" class="validate">
+                                <label for="Email">Qual o seu Email?</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">place</i>
+                                <select id="Campo1">
+                                    <option value="default" disabled selected>Origem</option>
+                                </select>
+                                <label for="Campo1">Embarque</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">place</i>
+                                <select id="Campo2">
+                                    <option value="default" disabled selected>Destino</option>
+                                </select>
+                                <label for="Campo2">Desembarque</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="Campo3" type="text" class="datepicker" class="validate">
+                                <label for="Campo3">Data do Embarque</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">schedule</i>
+                                <input id="Campo4" type="text" class="timepicker" class="validate">
+                                <label for="Campo4">Hora do Embarque</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">people</i>
+                                <input id="Campo5" type="number" class="validate">
+                                <label for="Campo5">Quantos adultos?</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">people</i>
+                                <input id="Campo6" type="number" class="validate">
+                                <label for="Campo6">Quantas crianças?</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">flight</i>
+                                <label for="campoVolta">Gostaria de comprar a volta?</label>
+                                <br><br>
+                                <div class="switch">
+                                    <label>
+                                        Nao
+                                        <input id="campoVolta" type="checkbox">
+                                        <span class="lever"></span>
+                                        Sim
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="Volta" class="hide">
+                    <div class="collapsible-header">
+                        <i class="material-icons">flight_land</i>
+                        Volta
+                    </div>
+                    <div class="collapsible-body">
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">place</i>
+                                <select id="Campo7">
+                                    <option value="default" disabled selected>Origem</option>
+                                </select>
+                                <label for="Campo7">Embarque</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">place</i>
+                                <select id="Campo8">
+                                    <option value="default" disabled selected>Destino</option>
+                                </select>
+                                <label for="Campo8">Desembarque</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="Campo9" type="text" class="datepicker" class="validate">
+                                <label for="Campo9">Data do Embarque</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">schedule</i>
+                                <input id="Campo10" type="text" class="timepicker" class="validate">
+                                <label for="Campo10">Hora do Embarque</label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="center-align">
+                <button id="btnForm" href="#" class="btn waves-effect waves-light blue"><b>Continuar</b><i
+                        class="material-icons right">send</i></button>
+                <button id="btnLimpar" href="#" class="btn waves-effect waves-light red"><i
+                        class="material-icons">undo</i></button>
+            </div>
+        </div>
+        <div id="compraConcluida"></div>
+    </main>
+    <!-- Importaçao de Scripts -->
+    <script src="js/validarFormulario.js"></script>
+    <script src="js/compraConcluida.js"></script>
+    <script src="js/carregarImoveis.js"></script>
+    <script>
+        M.AutoInit()
+
+        /* Validar campos */
+        document.getElementById("btnForm").addEventListener("click", () => {
+            validarFormulario(
+                Dados = {
+                    Nome: document.getElementById("Nome").value,
+                    Email: document.getElementById("Email").value,
+                    Campo1: document.getElementById("Campo1").value,
+                    Campo2: document.getElementById("Campo2").value,
+                    Campo3: document.getElementById("Campo3").value,
+                    Campo4: document.getElementById("Campo4").value,
+                    Campo5: document.getElementById("Campo5").value,
+                    Campo6: document.getElementById("Campo6").value,
+                    Campo7: document.getElementById("Campo7").value,
+                    Campo8: document.getElementById("Campo8").value,
+                    Campo9: document.getElementById("Campo9").value,
+                    Campo10: document.getElementById("Campo10").value
+                })
+        })
+
+        /* Limpar campos */
+        document.getElementById("btnLimpar").addEventListener("click", () => {
+            var campos = document.querySelectorAll('.Campo')
+            for (var i = 0; i < campos.length; i++) {
+                campos[i].value = ''
+            }
+            M.updateTextFields()
+        })
+
+        /* Escolher viagem de volta */
+        document.getElementById("campoVolta").addEventListener("click", () => { document.getElementById("Volta").classList.contains('hide') ? document.getElementById("Volta").classList.remove('hide') : document.getElementById("Volta").classList.add('hide') })
+    </script>
+</body>
+
+</html>
