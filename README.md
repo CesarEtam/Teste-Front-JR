@@ -11,7 +11,12 @@
 - [x] Layout
 - [x] Passagem de ida
 - [x] Passagem de volta
-- [ ] Teste das funcionalidades
+- [x] Validaçao do formulario
+- [ ] Modal de Check-out
+- [ ] Check data de saida inferior a dia atual
+- [ ] Responsividade
+- [ ] Redefinir formulario
+- [ ] Aeroportos
 
 
 ### Autor
