@@ -14,7 +14,7 @@
 - [x] Validaçao do formulario
 - [x] Modal de Check-out
 - [x] Check data de saida inferior a dia atual
-- [ ] Responsividade
+- [x] Responsividade
 - [x] Redefinir formulario limparCampos
 - [x] Aeroportos
 
