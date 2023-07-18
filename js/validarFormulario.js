@@ -10,12 +10,12 @@ function validarFormulario(Dados) {
                             if (Dados.Campo5.length !== 0) {
                                 if (Dados.Campo6.length !== 0) {
                                     /* Finalizado as validaçoes */
-                                    if (document.getElementById("campoVolta").checked === false) {
+                                    if (document.getElementById("campoVolta").checked === false && validarData() === true) {
                                         // Back-End Envio de formulario somente ida
                                         M.toast({html: 'Cadastrado com sucesso!'})
                                         compraConcluida(Dados)
                                         return true
-                                    } else if (Dados.Campo1 >= Dados.Campo6 && document.getElementById("campoVolta").checked === true) {
+                                    } else if (Dados.Campo1 >= Dados.Campo6 && document.getElementById("campoVolta").checked === true && validarData() === true) {
                                         // Back-End Envio de formulario com ida e volta
                                         M.toast({html: 'Cadastrado com sucesso!'})
                                         compraConcluida(Dados)

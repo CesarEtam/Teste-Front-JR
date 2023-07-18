@@ -183,10 +183,11 @@
 
         /* Limpar campos (Nao esta funcionando) */
         document.getElementById("btnLimpar").addEventListener("click", () => {
-            var campos = document.querySelectorAll('.Campo')
+            var campos = document.querySelectorAll('input')
             for (var i = 0; i < campos.length; i++) {
                 campos[i].value = ''
             }
+            M.toast({html: 'Campos limpos.'})
             M.updateTextFields()
         })
 

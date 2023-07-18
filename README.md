@@ -12,11 +12,21 @@
 - [x] Passagem de ida
 - [x] Passagem de volta
 - [x] Validaçao do formulario
-- [ ] Modal de Check-out
+- [x] Modal de Check-out
 - [x] Check data de saida inferior a dia atual
 - [ ] Responsividade
-- [ ] Redefinir formulario limparCampos
+- [x] Redefinir formulario limparCampos
 - [x] Aeroportos
+
+
+### Como usar
+```
+- Crie uma pasta
+cd meu-projeto
+
+- Clone o projeto
+git clone https://github.com/CesarEtam/Teste-Front-JR.git
+```
 
 
 ### Autor
