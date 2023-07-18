@@ -20,11 +20,14 @@
 
 
 ### Como usar
-```
+
 - Crie uma pasta
+```
 cd meu-projeto
+```
 
 - Clone o projeto
+```
 git clone https://github.com/CesarEtam/Teste-Front-JR.git
 ```
 
