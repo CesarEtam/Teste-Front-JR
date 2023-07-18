@@ -13,9 +13,9 @@
 <body>
     <main>
         <div class="container">
-            <div class="center-align tooltipped" data-position="bottom" data-tooltip="Sua empresa de viagem"><a
+            <div class="center-align tooltipped" data-position="bottom" data-tooltip="Wizzi"><a
                     href="#"><img
-                        src="https://img.freepik.com/vetores-gratis/logotipo-detalhado-da-viagem_23-2148616611.jpg"
+                        src="https://camo.githubusercontent.com/06675a5490cc59a6f16b9e8ae7e9c20830e9e66177a38febad8dc8b804d64615/68747470733a2f2f6369342e676f6f676c6575736572636f6e74656e742e636f6d2f70726f78792f326c4463425964423563664156425f714a465a5f4b515853642d543869624e6f6f654e4e63735f4e4d324c705f4e373363586d435a7865444547644535633733367a7169444c6674657a344b346f327a5279784c476e6748714d585359725954686b53307630446f6d494b35355f7442554e796f4b762d31325968626a5632383556596879676b44704b453d73302d642d65312d66742368747470733a2f2f77697a7a692d7374617469632d656d61696c2d66696c65732e73332e73612d656173742d312e616d617a6f6e6177732e636f6d2f77697a7a695f6d61696e5f6c6f676f5f677265656e2e706e67"
                         width="25%" height="25%" alt="Empresa de Viagens"></a></div>
 
             <ul class="collapsible">
@@ -61,7 +61,7 @@
                         <div class="row">
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">date_range</i>
-                                <input id="Campo3" type="text" class="datepicker" class="validate">
+                                <input id="Campo3" type="text" class="datepicker" class="validate" onChange="validarData()">
                                 <label for="Campo3">Data do Embarque</label>
                             </div>
 
@@ -155,8 +155,9 @@
     </main>
     <!-- Importaçao de Scripts -->
     <script src="js/validarFormulario.js"></script>
+    <script src="js/carregarAeroporto.js"></script>
     <script src="js/compraConcluida.js"></script>
-    <script src="js/carregarImoveis.js"></script>
+    <script src="js/validarData.js"></script>
     <script>
         M.AutoInit()
 
@@ -176,10 +177,11 @@
                     Campo8: document.getElementById("Campo8").value,
                     Campo9: document.getElementById("Campo9").value,
                     Campo10: document.getElementById("Campo10").value
-                })
+                }
+            )
         })
 
-        /* Limpar campos */
+        /* Limpar campos (Nao esta funcionando) */
         document.getElementById("btnLimpar").addEventListener("click", () => {
             var campos = document.querySelectorAll('.Campo')
             for (var i = 0; i < campos.length; i++) {
@@ -188,7 +190,7 @@
             M.updateTextFields()
         })
 
-        /* Escolher viagem de volta */
+        /* Opçao de escolha de passagem de volta com Listener e ternario */
         document.getElementById("campoVolta").addEventListener("click", () => { document.getElementById("Volta").classList.contains('hide') ? document.getElementById("Volta").classList.remove('hide') : document.getElementById("Volta").classList.add('hide') })
     </script>
 </body>

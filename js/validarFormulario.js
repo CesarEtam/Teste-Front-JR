@@ -11,12 +11,12 @@ function validarFormulario(Dados) {
                                 if (Dados.Campo6.length !== 0) {
                                     /* Finalizado as validaçoes */
                                     if (document.getElementById("campoVolta").checked === false) {
-                                        // Back-End Envio de formulario sem volta
+                                        // Back-End Envio de formulario somente ida
                                         M.toast({html: 'Cadastrado com sucesso!'})
                                         compraConcluida(Dados)
                                         return true
                                     } else if (Dados.Campo1 >= Dados.Campo6 && document.getElementById("campoVolta").checked === true) {
-                                        // Back-End Envio de formulario com volta
+                                        // Back-End Envio de formulario com ida e volta
                                         M.toast({html: 'Cadastrado com sucesso!'})
                                         compraConcluida(Dados)
                                         return true

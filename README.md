@@ -13,10 +13,10 @@
 - [x] Passagem de volta
 - [x] Validaçao do formulario
 - [ ] Modal de Check-out
-- [ ] Check data de saida inferior a dia atual
+- [x] Check data de saida inferior a dia atual
 - [ ] Responsividade
-- [ ] Redefinir formulario
-- [ ] Aeroportos
+- [ ] Redefinir formulario limparCampos
+- [x] Aeroportos
 
 
 ### Autor
